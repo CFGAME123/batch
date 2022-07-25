@@ -1,0 +1,130 @@
+@echo off: sirve para abrir una consola de windows y no se cierre de golpe
+echo: sirve para enseñar un mensaje por pantalla
+echo.: sirve para hacer un salto de linea
+
+pause: sirve para hacer una pausa de secuencia
+pause>nul: sirve para no enseñar ese feo mensaje de "presiona una tecla para continuar"
+
+exit: sirve para finalizar el programa
+cls: sirve para limpiar la consola de windows
+
+set: es una variable en donde se pone cualquier valor  ej: set edad= 12
+y se enseña ese valor en pantalla usando un "echo",un mensaje cualquiera y 
+la variable usando %% ej: echo tienes %edad%
+
+set/p: sirve para hacer la entrada de usuario usando una variable y
+el usuario da un valor a esa variable y la enseña por pantalla
+ej: set/p nombre= como te llamas?
+    cls
+    echo hola %nombre% 
+
+set/a: funciona igual que el set/p  pero esta funciona para hacer
+operaciones (sumas +, restas -, multiplicacion *, divicion /) 
+            ej: set/p numero1= dame un numero 
+                echo.
+                set/p numero2= dame otro numero
+                echo.
+                set/a suma= %numero1% + %numero%
+                echo.
+                echo %numero1%  + %numero2% = %suma%
+
+if: nos sirve para saber si se cumple una condicion 
+ej: 
+    set/p variable= cuanto es 2+2?
+    echo.
+    if %variable% == 4 echo bien :)
+    echo.
+
+if not: sirve para saber si la variable no cumple con tan condicion
+if variable==valor: para expresar si la variable es igual a valor haz esto
+if variable LSS valor: para expresar si la variable es menor a valor haz esto
+if variable GTR valor: para expresar si la variable es mayor a valor haz esto
+if variable LEQ valor: para expresar si la variable es menor o igual haz esto
+if variable GEQ valor: para expresar si la variable es mayor o igual haz esto
+
+color: nos sirve para poner un color de letra y de fondo usando una combinacion de letras y numeros
+            ej: 
+                A = Verde claro
+                B = Aguamarina claro
+                C = Rojo claro
+                D = Púrpura claro
+                E = Amarillo claro
+                F = Blanco brillante
+                0 = Negro
+                1 = Azul
+                2 = Verde
+                3 = Aguamarina
+                4 = Rojo
+                5 = Púrpura
+                6 = Amarillo
+                7 = Blanco
+                8 = Gris
+                9 = Azul claro
+
+
+color 70: es donde vamos a escribir la covinacion de numeros y letras para los colores de las letras y del fondo de la cmd
+            ej: color 4f
+
+
+> y >>: nos sirve para crear desde la consola un txt o un archivo cualquiera
+            ej: echo hola>archivo.txt
+                echo hola como estas?>>archivo.txt
+
+title: nos sirve para ponerle un titulo a nuestro .bat
+            ej: title prueba
+
+start: sirve para ejecutar un archivo
+            ej: start archivo.txt
+            
+del: nos sirve para eliminar un archivo
+            ej: del archivo.txt
+
+del/f Modo force. Borra incluso los archivos de solo lectura
+del/s Borra también los subdirectorios.
+del/p Pide confirmación
+del/q Modo silencioso. No pide confirmación en ningún caso
+
+cd: cambiar el directorio de nuestro archivo .bat
+    ej:
+    
+rd: borra un directorio de raíz solo tenemos que especificar la ruta del directorio y borra todo lo que tenga dentro, carpetas, mas archivos, etc.
+    ej:
+
+format: formatea una unidad por ejemplo format k: formatearía un pendrive externo o le que tengamos en esa unidad, o format c: (ya podéis imaginaros lo que hace)
+    ej:
+
+taskkill: termina un proceso
+    ej:
+
+shutdown: sirve para apagar, hibernar, pausar, bloquear alguna computadora
+
+    ej: -p Apaga el equipo local sin tiempo de espera ni advertencia. shutdown/
+        -h Hiberna el equipo local.
+        -l Cierra la sesion.
+        -g Cierra la sesion y reinicia el equipo
+        -s Apaga el equipo.
+        -r Reinicia el equipo.
+        -e Documenta la razón del cierre inesperado de un equipo.
+        -m \\equipo Especifica el equipo de destino. (explicado mas abajo)
+        -t xxx Establece el período de tiempo de espera antes del cierre en xxx segundos.
+        -c «comentario» Comentario acerca de la razón del reinicio o apagado.
+        -f Fuerza el cierre de las aplicaciones sin advertir previamente a los usuarios.
+        -a Cancela el apagado. 
+
+msg *: para mostrar un mensaje de windows
+
+copy: sirve para copiar archivos
+    ej: copy C:\Documents and Settings\Propietario\Escritorio\cosa.txt «C:\Documents and Settings\Propietario\Mis documentos\cosa2.txt
+
+attrib: ver los atributos de un archivo poniendo el nombre del archivo o la direccion en donde estan
+        ej: r => Lectura. Solo lectura con +r, normal con -r
+            h => oculto. Se activa con +h y desactiva con -h
+            s => Sistema. Se activa con +s y desactiva con -s
+
+
+para borrar todos los arcvhivos de una debemos usar el "del-nombre del archivo o una extencion-* "
+    ej: del *.txt
+
+help: sirve para tener todos los comandos para guiarce
+
+rem: son los comentarios en el lenguaje de .bat
